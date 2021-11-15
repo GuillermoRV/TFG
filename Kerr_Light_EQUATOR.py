@@ -2,7 +2,7 @@
 """
 Created on Sun Sep 19 17:18:46 2021
 
-@author: Usuario
+@author: GuillermoRV
 """
 import numpy as np
 from matplotlib import pyplot as plt
@@ -61,13 +61,3 @@ plt.plot(x,y,'b');plt.xlabel("x");plt.ylabel("y")
 plt.grid()
 plt.xlim(-28,27);plt.ylim(-7,17)
 plt.title('M='+str(M)+'; l='+str(l)+'; a='+str(a)+'; e='+str(e)+'; (Geometrical Units)')
-
-
-
-
-#if (b>np.sqrt(27)*M):
-#    print("Tipo alpha")
-#elif (b==np.sqrt(27)*M):
-#    print("Tipo beta")
-#else:
-#    print("Tipo gamma")
