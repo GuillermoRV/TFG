@@ -2,7 +2,7 @@
 """
 Created on Sun Sep 19 17:18:46 2021
 
-@author: Usuario
+@author: GuillermoRV
 """
 import numpy as np
 from matplotlib import pyplot as plt
@@ -51,9 +51,3 @@ for i in range(phi_max):
 plt.plot(x,y,'b')
 plt.xlabel("x")
 plt.ylabel("y")
-#if (b>np.sqrt(27)*M):
-#    print("Tipo alpha")
-#elif (b==np.sqrt(27)*M):
-#    print("Tipo beta")
-#else:
-#    print("Tipo gamma")
