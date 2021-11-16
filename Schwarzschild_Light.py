@@ -48,6 +48,4 @@ for i in range(phi_max):
     x[i]=r[i]*np.cos(phi[i])
     y[i]=r[i]*np.sin(phi[i])
 
-plt.plot(x,y,'b')
-plt.xlabel("x")
-plt.ylabel("y")
+plt.plot(x,y,'b');plt.xlabel('x(Geometrical Units)');plt.ylabel('y(Geometrical Units)');plt.title('M='+str(M))

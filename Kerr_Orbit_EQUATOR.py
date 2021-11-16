@@ -7,7 +7,7 @@ Created on Sun Sep 19 17:18:46 2021
 import numpy as np
 from matplotlib import pyplot as plt
 #Unidades Geometricas G=1; c=1
-M=1;l=6;a=M*0.9;e=0.999;E=(e**2-1)/2
+M=1;l=6;a=M*0.1;E=-0.001;e=np.sqrt(2*E+1)
 Rmas=M+np.sqrt(M**2-a**2);Rmenos=M-np.sqrt(M**2-a**2)
 Risco=(l**2+a**2*(1-e**2)+np.sqrt((l**2+a**2*(1-e**2))**2-12*M**2*(l-a*e)**2))/(2*M)
 t=np.linspace(0,14,1000)
@@ -52,10 +52,11 @@ for i in range(len(t)):
     Ry[i]=Rmas*np.sin(t[i])
     Rz[i]=Rmas*np.cos(t[i])
 #plt.plot(Ry,Rz,'black')
-ax.plot(x,y,label='a='+str(a),color='blue');ax.legend();plt.xlabel('x');plt.ylabel('y')
+BH=plt.Circle((0,0),Rmas,color='black');ax.add_patch(BH)
+ax.plot(x,y,label='a='+str(a),color='blue');ax.legend();plt.xlabel('x(Geometrical Units)');plt.ylabel('y(Geometrical Units)')
 #plt.plot(x,y);plt.xlabel('x');plt.ylabel('y')
 plt.xlim(-40,75);plt.ylim(-40,75)
-plt.title('M='+str(M)+'; l='+str(l)+'; R\N{SUBSCRIPT ZERO}='+str(1/u[0])+'; E=-0.001; (Geometrical Units)')
+plt.title('M='+str(M)+'; l='+str(l)+'; R\N{SUBSCRIPT ZERO}='+str(1/u[0])+'; E=-0.001')
 #plt.scatter(0,0)
 plt.grid()
 print(l**2>12*M**2)
